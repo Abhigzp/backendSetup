@@ -57,7 +57,7 @@ const login = async (req, res) => {
 
 const getAllUsers = async (req, res) => {
   try {
-    User.find()
+    User.find({}, 'id name phone email')
       .then((results) => {
         res.send({ status: 'success', code: 200, message: "users data", users: results });
       })
@@ -85,6 +85,4 @@ const updateUser = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 }
-
-
 module.exports = { userRegister, login, getAllUsers, getUserByID, updateUser };
