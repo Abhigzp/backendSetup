@@ -9,7 +9,7 @@ dist/
 build/
 
 # Ignore environment-specific configuration files
-.env
+# .env
 .env.local
 
 # Ignore package-lock.json or yarn.lock, depending on your package manager
